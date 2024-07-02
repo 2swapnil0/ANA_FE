@@ -1,0 +1,24 @@
+.bg-col1 {
+    background-color: #1E1E1E;
+    color: white; /* Adjust text color for visibility */
+  }
+  #browser-url {
+    pointer-events: none;
+  }
+
+  .browser-img {
+    display: block;
+    object-fit: contain;
+  }
+/* .OuterContainer{
+    background-color: #1E1E1E
+} */
+.OuterContainer{
+    border-color: #373737;
+}
+.InnerContainer{
+    background-color: #1E1E1E;
+}
+#browser-url{
+    color: #E0E0E0;
+}

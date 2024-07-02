@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.workspace-header {
+    /* background-color: black; Assuming a black background */
+    color: #E0E0E0; /* White text */
+    font-family: 'Arial', sans-serif; /* Or any other font you prefer */
+    font-size: 24px; /* Adjust the size as needed */
+    /* padding: 10px 20px; Add some padding */
+    display: inline-block; /* To fit the content width */
+    margin: 0; /* Remove default margin */
+    border-radius: 4px; /* Assuming you want rounded corners */
+    color: #2dc1a9;
+}
+/* .material-symbols-outlined{
+    color: greenyellow;
+} */
+.control-icons{
+    justify-content: flex-end;
+    color: #04ff00;
+  font-size: 1.5rem;
+
+}

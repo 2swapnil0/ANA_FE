@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.sidebar-bg {
+  background-color: #00001e;
+  transition: width 1.2s ease;
+  width: 70px;
+}
+
+.sidebar-expanded {
+  width: 15%;
+}
+
+.logo-img {
+  width: 42px;
+  background-color: #e4e7ea;
+  height: auto;
+  margin: 10px -3px;
+}
+
+.ana-text {
+  font-family:"Urbanist", sans-serif;
+  font-weight: 700;
+  font-size: 34px;
+  color: #2dc1a9;
+  margin-left: 1rem;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.expanded-ana-text {
+  display: inline;
+  opacity: 1;
+}
+
+.menu-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px 0;
+  position: relative;
+}
+
+.menu-item .icon-text {
+  font-family:"Urbanist", sans-serif;
+  display: none;
+  margin-left: 1rem;
+  font-weight: 700;
+  font-size: 20px;
+  color: #2dc1a9;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  position: absolute;
+  left: 60px; /* Align text at the same horizontal level */
+}
+
+.sidebar-expanded .icon-text {
+  display: inline;
+  opacity: 1;
+}
+
+.side-icon {
+  margin-left: 3px;
+  color: #2dc1a9;
+  font-size: 1.65rem;
+}
+
+/* Modal styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: #1E1E1E;
+  padding: 1rem;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1E1E1E;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  font-size: 20px;
+  padding: 10px 20px;
+  margin: 0;
+  border-radius: 4px;
+  border: 3px solid #373737;
+}
+
+.modal-close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.modal-body {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  max-height: 300px;
+  overflow-y: auto;
+  margin-left: 0.5rem;
+}
+
+.modal-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  color: white;
+}
+
+.modal-project-btn,
+.modal-delete-btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+  margin-right: 20px;
+}
+
+.modal-project-btn {
+  text-align: left;
+  font: inherit;
+  color: whitesmoke; /* Ensures the text color is black */
+}
+
+.modal-delete-btn {
+  color: #ff0000;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 1rem;
+}
+
+.modal-new-project-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: #2dc1a9;
+  color: black;
+  cursor: pointer;
+  border-radius: 0.25rem;
+}
+
+
+.modal-container {
+  background: #1E1E1E;
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.modal-content {
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.project-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.project-button,
+.create-project-button {
+  padding: 10px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.project-button:hover,
+.create-project-button:hover {
+  background-color: #0056b3;
+}
+
+.create-btn {
+  background-color: #2dc1a9;
+  padding: 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.create-input {
+  width: 100%;
+  padding: 10px;
+  border: 3px solid #373737;
+  border-radius: 4px;
+  background-color: #1E1E1E;
+  color: white;
+  font-size: 1rem;
+  margin-top: 1rem;
+  padding: 15px;
+}
+
+.create-input::placeholder {
+  color: #888;
+}
+
+.create-input:focus {
+  outline: none;
+  
+}
+.success-message{
+  background-color: #373737;
+  color: white;
+}
+.modal-item::-webkit-scrollbar {
+  width: 5px; /* Make the scrollbar thumb narrower */
+  background: transparent; 
+  
+}
+.modal-item::-webkit-scrollbar-thumb {
+  background-color: grey;
+  border-radius: 10px;
+  min-height: 10%;
+}

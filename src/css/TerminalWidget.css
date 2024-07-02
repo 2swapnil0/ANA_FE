@@ -1,0 +1,84 @@
+.terminal-widget {
+  display: flex;
+  flex-direction: column;
+}
+
+.terminal-container {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #373737;
+  border-radius: 8px;
+  height: 50%; /* Adjust the height as needed */
+}
+
+.terminal-header {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  border-bottom: 1px solid #373737;
+  background-color: #1e1e1e;
+}
+
+.traffic-lights {
+  display: flex;
+  
+  margin-left: 8px;
+  margin-right: 16px;
+}
+
+.traffic-light {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.traffic-light.red {
+  background-color: #ff5f56;
+}
+
+.traffic-light.yellow {
+  background-color: #ffbd2e;
+}
+
+.traffic-light.green {
+  background-color: #27c93f;
+}
+
+.terminal-title-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+#terminal-title {
+  color: #E0E0E0;
+}
+
+.terminal-content {
+  height: 100%;
+  width: 100%;
+  border-bottom-left-radius: 8px;
+  background-color: #1e1e1e;
+}
+
+#terminal-content :global(.xterm) {
+    padding: 10px;
+    height: 100%; /* Ensure terminal content height is fixed */
+  }
+
+  #terminal-content :global(.xterm-viewport) {
+    overflow-y: auto !important;
+    height: 100%;
+  }
+.OuterContainer{
+    border-color: #373737;
+}
+.InnerContainer{
+    background-color: #1E1E1E;
+}
+.TerminalContent {
+  height: 100%; /* Ensure it takes full height of its parent */
+  width: 100%; /* Ensure it takes full width of its parent */
+  overflow: auto; /* Enable scrolling if content overflows */
+}
